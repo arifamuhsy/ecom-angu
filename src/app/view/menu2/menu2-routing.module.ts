@@ -5,7 +5,10 @@ import { Menu2MainComponent } from 'src/app/main/menu2/menu2-main/menu2-main.com
 const routes: Routes = [
   {
     path: '',
-    component: Menu2MainComponent
+    component: Menu2MainComponent,
+    data: {
+      title: 'Menu 2'
+    }
   }
 ];
 

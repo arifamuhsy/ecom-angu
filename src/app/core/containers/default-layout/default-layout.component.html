@@ -77,6 +77,11 @@
             </c-dropdown>
         </ng-template>
     </c-header>
+    <div class="card">
+        <c-container [fluid]="true">
+            <c-breadcrumb-router class="ms-2"></c-breadcrumb-router>
+        </c-container>
+    </div>
         <div class="body flex-grow-1 px-3">
             <c-container breakpoint="lg" class="h-auto">
                 <router-outlet />

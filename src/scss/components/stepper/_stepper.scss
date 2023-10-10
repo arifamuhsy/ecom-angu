@@ -1,0 +1,125 @@
+.stepper-wrapper {
+  width: 100%;
+}
+
+.stepper-cart {
+  height: 120px;
+  border-radius: 10px;
+}
+
+.progressbar {
+  margin: 0;
+  padding: 0;
+  counter-reset: step;
+  display: flex;
+}
+
+.progressbar li {
+  list-style-type: none;
+  flex: 1;
+  position: relative;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.5;
+  color: #6c757d;
+  font-family: inherit;
+}
+
+.progressbar li::before {
+  content: counter(step);
+  counter-increment: step;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  border: 1px solid transparent;
+  display: block;
+  text-align: center;
+  margin: 0 auto 10px auto;
+  border-radius: 50%;
+  background-color: #4694a6;
+  color: white;
+}
+
+.stepper-line {
+  content: '';
+  position: absolute;
+  width: 50%;
+  min-height: 1px;
+  background-color: rgba(0, 0, 0, 0.12);
+  top: 20px;
+  left: -50%;
+  z-index: 3;
+  margin-left: 25%;
+}
+
+.progressbar li:first-child::after {
+  content: none;
+}
+
+.progressbar li.active a {
+  color: #ff843a;
+}
+
+a.disabled {
+  pointer-events: none;
+  cursor: default;
+}
+
+.progressbar li.active::before {
+  border-color: #ff843a;
+  background-color: #ff843a;
+}
+
+@media (max-width: 1280px) {
+  .stepper-cart {
+      height: 100%;
+  }
+
+  .progressbar {
+      display: flex;
+      justify-content: flex-start;
+  }
+
+  .progressbar li {
+      list-style-type: none;
+      display: flex;
+      height: 40px;
+      position: relative;
+      text-align: left;
+      font-size: 1rem;
+      font-weight: 700;
+      line-height: 1.5;
+      color: #6c757d;
+      font-family: inherit;
+      margin-bottom: 25px;
+  }
+
+  .progressbar li::before {
+      content: counter(step);
+      counter-increment: step;
+      width: 40px;
+      height: 40px;
+      line-height: 40px;
+      border: 1px solid transparent;
+      display: block;
+      text-align: center;
+      margin: 0 0 10px 0;
+      border-radius: 50%;
+      background-color: #4694a6;
+      color: white;
+  }
+
+  .progressbar {
+      counter-reset: step;
+      display: block;
+  }
+
+  .stepper-line {
+      display: none;
+  }
+
+  .progressbar li a {
+      margin-left: 20px;
+  }
+}

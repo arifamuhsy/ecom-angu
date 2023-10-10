@@ -1,0 +1,72 @@
+.financial-table-scroll {
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+    font-size: small;
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 0 5px 5px -3px rgb(0 0 0 / 20%), 0 8px 10px 1px rgb(0 0 0 / 14%), 0 3px 14px 2px rgb(0 0 0 / 12%);
+}
+
+.financial-table-wrap {
+    width: 100%;
+    height: 100%;
+    overflow: auto; // overflow to left
+}
+
+.financial-table-container {
+    width: 100%;
+    height: 100%;
+    background: #fff;
+}
+
+.financial-table-scroll table {
+    width: 100%;
+    margin: auto;
+    table-layout: fixed;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+.financial-table-scroll th, .financial-table-scroll td {
+    width: 350px;
+    border: 1px solid #e5e7e9;
+    white-space: nowrap;
+    vertical-align: top;
+    overflow: hidden;
+}
+
+.financial-table {
+    &-fixed-side {
+        width: 100%;
+        height: 100%;
+        left: 0;
+        z-index: 100 !important;
+        position: sticky !important;
+        position: -webkit-sticky !important;
+        word-wrap: break-word !important;
+        white-space: normal !important;
+        background-color: #fff;
+    }
+
+    &-header {
+        height: 70px !important;
+    }
+
+    &-body {
+        height: 40px !important;
+    }
+
+    &-footer {
+        height: 50px !important;
+    }
+}
+
+.financial-table-body-wrapper tr:nth-child(even) {
+    background-color: #eee;
+}
+
+.financial-report-table-footer {
+    width: 100%;
+    height: 50px;
+}

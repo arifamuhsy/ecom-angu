@@ -1,0 +1,13 @@
+@import '~bs-stepper/dist/css/bs-stepper.min.css';
+
+// Medium devices (tablets, 768px and up)
+@media (max-width: 991.98px) {
+  .bs-stepper-header {
+    display: block;
+    text-align: left;
+  }
+
+  .bs-stepper .step-trigger {
+    flex-direction: row;
+  }
+}
