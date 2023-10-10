@@ -20,6 +20,10 @@ const routes: Routes = [
         path: 'menu3',
         loadChildren: () => import('./menu3/menu3.module').then((mod) => mod.Menu3ParentModule)
       },
+      {
+        path: 'form',
+        loadChildren: () => import('./form/form.module').then((mod) => mod.FormParentModule)
+      },
     ]
   }
 ];
