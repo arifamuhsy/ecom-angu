@@ -8,7 +8,7 @@ import { Page500Component } from './core/containers/pages/page500/page500.compon
 const routes: Routes = [
   {
     path: '',
-    redirectTo: '/',
+    redirectTo: 'menu1',
     pathMatch: 'full'
   },
   {

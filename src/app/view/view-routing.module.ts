@@ -9,14 +9,17 @@ const routes: Routes = [
     },
     children: [
       {
-        path: '',
-        redirectTo: 'intro',
-        pathMatch: 'full'
+        path: 'menu1',
+        loadChildren: () => import('./menu1/menu1.module').then((mod) => mod.Menu1ParentModule)
       },
       {
-        path: 'intro',
-        loadChildren: () => import('./intro/intro.module').then((mod) => mod.IntroModule)
-      }
+        path: 'menu2',
+        loadChildren: () => import('./menu2/menu2.module').then((mod) => mod.Menu2ParentModule)
+      },
+      {
+        path: 'menu3',
+        loadChildren: () => import('./menu3/menu3.module').then((mod) => mod.Menu3ParentModule)
+      },
     ]
   }
 ];

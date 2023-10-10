@@ -1,6 +1,11 @@
 {
-  "name": "cv-v5",
-  "version": "0.0.0",
+  "name": "coreui-learn",
+  "version": "0.0.1",
+  "description": "Angular Admin Template based form CoreUi Free Angular Admin Template",
+  "author": {
+    "name": "Arifa MS",
+    "github": "https://github.com/arifamuhsy"
+  },
   "scripts": {
     "ng": "ng",
     "start": "ng serve",

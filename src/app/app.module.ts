@@ -3,7 +3,6 @@ import { BrowserModule, Title } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomeModule } from './home/home.module';
 import { DefaultLayoutComponent } from './core/containers';
 import { Page404Component } from './core/containers/pages/page404/page404.component';
 import { Page403Component } from './core/containers/pages/page403/page403.component';
@@ -29,7 +28,6 @@ const APP_CONTAINERS = [
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HomeModule,
     SidebarModule,
     HttpClientModule,
     AvatarModule,

@@ -4,7 +4,8 @@
         id="sidebar1"
         visible
     >
-        <c-sidebar-brand>Sidebar
+        <c-sidebar-brand>
+          Logo
         </c-sidebar-brand>
 
         <!-- <perfect-scrollbar [config]="perfectScrollbarConfig"> -->
@@ -19,15 +20,72 @@
     </c-sidebar>
 
     <div class="wrapper d-flex flex-column min-vh-100 bg-light dark:bg-transparent">
+      <c-header class="sticky-top bg-light dark:bg-white dark:bg-opacity-10">
+        <ng-container>
+            <c-container [fluid]="true" >
+                <button toggle="visible" cHeaderToggler [cSidebarToggle]="sidebarId" class="ps-1">
+                    <svg cIcon name="cilMenu" size="lg"></svg>
+                </button>
+                <c-header-nav class="ms-3 me-sm-4">
+                    <ng-container *ngTemplateOutlet="userDropdown"/>
+                </c-header-nav>
+            </c-container>
+        </ng-container>
+
+        <ng-template #userDropdown>
+            <c-dropdown alignment="end" variant="nav-item">
+                <a href
+                [caret]="false"
+                cDropdownToggle
+                class="py-0"
+                >
+                    <c-avatar src="assets/avatars/ava.jpg" status="success">
+                    </c-avatar>
+                </a>
+                <ul cDropdownMenu class="pt-0 pr-5 w-auto">
+                    <li>
+                        <h6 cDropdownHeader class="bg-light dark:bg-white dark:bg-opacity-10 fw-semibold py-2">Field Info</h6>
+                    </li>
+                    <li></li>
+                    <li>
+                        <button class="dropdown-item">
+                          <!-- <span class="dropdown-item"> -->
+                            <svg cIcon class="me-2" name="cilUser"></svg>
+                             Field 1
+                        <!-- </span> -->
+                        <!-- <span class="dropdown-item">
+                            <svg cIcon class="me-2" name="cilHome"></svg>
+                            role
+                        </span>
+                        <span class="dropdown-item">
+                            <svg cIcon class="me-2" name="cilStar"></svg>
+                            role
+                        </span> -->
+                        </button>
+                    </li>
+                    <li>
+                        <hr cDropdownDivider/>
+                    </li>
+                    <li>
+                        <button class="dropdown-item">
+                            <svg cIcon class="me-2" name="cilAccountLogout"></svg>
+                            Field 2
+                        </button>
+                    </li>
+                    <li></li>
+                </ul>
+            </c-dropdown>
+        </ng-template>
+    </c-header>
         <div class="body flex-grow-1 px-3">
             <c-container breakpoint="lg" class="h-auto">
                 <router-outlet />
             </c-container>
         </div>
-        
+
     <c-footer class="sticky-bottom bg-light dark:bg-transparent">
         <div class="ms-auto">
-            &copy; Arifa Copyright 2023
+            &copy; Barudak Copyright 2023
         </div>
     </c-footer>
     </div>
