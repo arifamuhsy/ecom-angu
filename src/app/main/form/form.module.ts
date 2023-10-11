@@ -1,8 +1,7 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { FormMainComponent } from './form-main/form-main.component';
-import { SharedFormModule } from 'src/app/shared';
-import { CardModule } from '@coreui/angular';
+import { SharedBaseModule, SharedFormModule } from 'src/app/shared';
+import { ButtonModule, CardModule, GridModule } from '@coreui/angular';
 
 
 
@@ -11,9 +10,11 @@ import { CardModule } from '@coreui/angular';
     FormMainComponent
   ],
   imports: [
-    CommonModule,
     SharedFormModule,
-    CardModule
+    CardModule,
+    GridModule,
+    SharedBaseModule,
+    ButtonModule
   ]
 })
 export class FormModule { }

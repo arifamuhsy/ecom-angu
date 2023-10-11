@@ -1,8 +1,114 @@
 <p>form-main works!</p>
 
-<c-card color="primary">
-  <c-card-header>Form No Validation</c-card-header>
-  <c-card-body>
+<c-row>
+  <c-col md="6">
+    <c-card>
+      <c-card-header class="bg-primary text-white">Form No Validation</c-card-header>
+      <c-card-body>
+        <form [formGroup]="form" (ngSubmit)="submitForm()" cForm novalidate>
 
-  </c-card-body>
-</c-card>
+            <c-row class="mt-2">
+              <c-col sm="12" md="6">
+                <label for="namaDepan">Nama Depan</label>
+                <input formControlName="namaDepan" type="text" placeholder="Masukkan Nama Depan" class="mt-1" cFormControl/>
+              </c-col>
+    
+              <c-col sm="12" md="6">
+                <label for="namaDepan">Nama Belakang</label>
+                <input formControlName="namaBelakang" type="text" placeholder="Masukkan Nama Belakang" class="mt-1" cFormControl/>
+              </c-col>
+              
+            </c-row>
+            
+            <c-row class="mt-2">
+              <c-col sm="12" md="6">
+                <label for="namaDepan">Email</label>
+                <input formControlName="email" type="email" placeholder="Masukkan email" class="mt-1" cFormControl/>
+              </c-col>
+            </c-row>
+    
+            <c-row class="mt-2">
+              <c-col sm="12" md="6">
+                <label for="namaDepan">Password</label>
+                <input formControlName="password" type="password" placeholder="Masukkan password" class="mt-1" cFormControl/>
+              </c-col>
+            </c-row>
+
+            <button
+            (click)="submitForm()"
+            color="primary"
+            class="mt-2"
+            cButton
+            >
+            Submit
+          </button>
+
+            <button
+            (click)="resetForm()"
+            color="primary"
+            class="mt-2 ms-1"
+            cButton
+            >
+            Reset
+          </button>
+        </form>
+
+        <div *ngIf="hasil === true">
+          <c-row class="mt-4">
+            <c-col md="5">
+              Hasil dari submit adalah
+            </c-col>  
+          </c-row>
+          
+          <c-row mt-1>
+            <c-col md="5">
+                Nama Depan
+              </c-col>
+              <c-col md="2">
+                :
+              </c-col>
+              <c-col md="5">
+                {{form.value.namaDepan}}
+              </c-col>
+            </c-row>
+
+          <c-row mt-1>
+            <c-col md="5">
+              Nama Belakang
+            </c-col>
+            <c-col md="2">
+              :
+            </c-col>
+            <c-col md="5">
+              {{form.value.namaBelakang}}
+            </c-col>
+          </c-row>
+          <c-row mt-1>
+            <c-col md="5">
+              Email
+            </c-col>
+            <c-col md="2">
+              :
+            </c-col>
+            <c-col md="5">
+              {{form.value.email}}
+            </c-col>
+          </c-row>
+
+          <c-row mt-1>
+            <c-col md="5">
+              Password
+            </c-col>
+            <c-col md="2">
+              :
+            </c-col>
+            <c-col md="5">
+              {{form.value.password}}
+            </c-col>
+          </c-row>
+
+        </div>
+      </c-card-body>
+    </c-card>
+  </c-col>
+</c-row>
