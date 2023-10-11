@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { FormModule } from '@coreui/angular-pro';
+import { FormModule } from '@coreui/angular';
 
 @NgModule({
     imports: [],
