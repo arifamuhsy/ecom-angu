@@ -18,63 +18,30 @@
     </c-sidebar> -->
 
     <div class="wrapper d-flex flex-column min-vh-100 bg-light dark:bg-transparent">
-      <c-header class="sticky-top bg-light dark:bg-white dark:bg-opacity-10">
-        <ng-container>
-            <c-container [fluid]="true" >
-                <button toggle="visible" cHeaderToggler [cSidebarToggle]="sidebarId" class="ps-1">
-                    <svg cIcon name="cilMenu" size="lg"></svg>
-                </button>
-                <c-header-nav class="ms-3 me-sm-4">
-                    <ng-container *ngTemplateOutlet="userDropdown"/>
-                </c-header-nav>
-            </c-container>
-        </ng-container>
-
-        <ng-template #userDropdown>
-            <c-dropdown alignment="end" variant="nav-item">
-                <a href
-                [caret]="false"
-                cDropdownToggle
-                class="py-0"
-                >
-                    <c-avatar src="assets/avatars/ava.jpg" status="success">
-                    </c-avatar>
+        <c-header>
+            <c-container fluid>
+              <c-header-brand [routerLink]>
+                <img src="assets/main/logo_website_shayna.png" class="img-fluid d-block w-25" />
+              </c-header-brand>
+              <c-header-nav class="ms-auto">
+                <c-dropdown alignment="end">
+                  <a cHeaderToggler cDropdownToggle cNavLink [caret]="false">
+                    <button toggle="visible" cHeaderToggler [cSidebarToggle]="sidebarId" class="ps-1">
+                        <svg cIcon name="cilMenu" size="lg"></svg>
+                    </button>
                 </a>
-                <ul cDropdownMenu class="pt-0 pr-5 w-auto">
+                  <ul cDropdownMenu>
+                    <li><a [routerLink] cDropdownItem>Action</a></li>
+                    <li><a [routerLink] cDropdownItem>Another action</a></li>
                     <li>
-                        <h6 cDropdownHeader class="bg-light dark:bg-white dark:bg-opacity-10 fw-semibold py-2">Field Info</h6>
+                      <hr cDropdownDivider>
                     </li>
-                    <li></li>
-                    <li>
-                        <button class="dropdown-item">
-                          <!-- <span class="dropdown-item"> -->
-                            <svg cIcon class="me-2" name="cilUser"></svg>
-                             Field 1
-                        <!-- </span> -->
-                        <!-- <span class="dropdown-item">
-                            <svg cIcon class="me-2" name="cilHome"></svg>
-                            role
-                        </span>
-                        <span class="dropdown-item">
-                            <svg cIcon class="me-2" name="cilStar"></svg>
-                            role
-                        </span> -->
-                        </button>
-                    </li>
-                    <li>
-                        <hr cDropdownDivider/>
-                    </li>
-                    <li>
-                        <button class="dropdown-item">
-                            <svg cIcon class="me-2" name="cilAccountLogout"></svg>
-                            Field 2
-                        </button>
-                    </li>
-                    <li></li>
-                </ul>
-            </c-dropdown>
-        </ng-template>
-    </c-header>
+                    <li><a [routerLink] cDropdownItem>Something else</a></li>
+                  </ul>
+                </c-dropdown>
+              </c-header-nav>
+            </c-container>
+          </c-header>
     <div class="card">
         <c-container [fluid]="true">
             <c-breadcrumb-router class="ms-2"></c-breadcrumb-router>
