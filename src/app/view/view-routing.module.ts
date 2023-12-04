@@ -24,6 +24,10 @@ const routes: Routes = [
         path: 'form',
         loadChildren: () => import('./form/form.module').then((mod) => mod.FormParentModule)
       },
+      {
+        path: 'form-validation',
+        loadChildren: () => import('./form-validation/form-validation.module').then((mod) => mod.FormValidationParentModule)
+      },
     ]
   }
 ];

@@ -9,7 +9,7 @@ import { iconSubset } from './icons/icon-subset';
     template: '<router-outlet></router-outlet>',
 })
 export class AppComponent {
-  title = 'coreui-learn';
+  title = 'e-commerce';
 
   constructor(
     private router: Router,

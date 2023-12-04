@@ -29,8 +29,17 @@ export const navItems: INavData[] = [
       // }
     },
     {
-      name: 'Form',
+      name: 'Form No Validation',
       url: '/form',
+      iconComponent: { name: 'cil-task' },
+      // badge: {
+      //   color: 'info',
+      //   text: 'NEW'
+      // }
+    },
+    {
+      name: 'Form With Validation',
+      url: '/form-validation',
       iconComponent: { name: 'cil-task' },
       // badge: {
       //   color: 'info',
